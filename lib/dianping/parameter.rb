@@ -22,6 +22,11 @@ class DianPing
       client.get(route, self)
     end
 
+    def business(id)
+      add :business_id, id
+      get '/v1/business/get_single_business'
+    end
+
   end
 end
 
