@@ -1,0 +1,13 @@
+# dian_ping configruation.
+# see http://developer.dianping.com/
+development:
+  appkey:
+  appSecret:
+
+test:
+  appkey:
+  appSecret:
+
+production:
+  appkey:
+  appSecret:

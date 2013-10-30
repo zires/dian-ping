@@ -6,7 +6,7 @@ require 'dianping/parameter'
 class DianPing
   include HTTParty
 
-  VERSION = '0.0.1'
+  VERSION = '0.0.2'
 
   attr_accessor :key, :secret
 
@@ -44,3 +44,5 @@ class DianPing
     end
 
 end
+
+require 'dianping/railtie' if defined?(Rails)
