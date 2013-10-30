@@ -1,5 +1,5 @@
 # encoding: utf-8
-module DP
+class DianPing
   module Business
 
     # coordinate[31.2204200000392, 121.41163000018]

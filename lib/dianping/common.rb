@@ -1,5 +1,5 @@
 # encoding: utf-8
-module DP
+class DianPing
   module Common
 
     # 根据是否有优惠券来筛选返回的商户

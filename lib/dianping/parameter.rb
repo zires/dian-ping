@@ -2,10 +2,10 @@
 require 'dianping/common'
 require 'dianping/business'
 
-module DP
+class DianPing
   class Parameter < Hash
-    include DP::Common
-    include DP::Business
+    include Common
+    include Business
 
     attr_reader :client
 

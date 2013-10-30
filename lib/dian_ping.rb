@@ -31,7 +31,7 @@ class DianPing
     end
 
     def parameter
-      DP::Parameter.new(self)
+      Parameter.new(self)
     end
 
     def method_missing(method_name, *args, &block)
