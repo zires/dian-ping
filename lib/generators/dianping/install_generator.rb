@@ -1,8 +1,8 @@
 # encoding: utf-8
-module DP
+class DianPing
   module Generators
     class InstallGenerator < ::Rails::Generators::Base
-      # Create open_qq.yml under config/initializers/
+      # Create dian_ping.yml under config/initializers/
       source_root File.expand_path("../../templates", __FILE__)
 
       desc "Creates a ThemePark initializer file."
