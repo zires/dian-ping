@@ -14,7 +14,7 @@ class DianPing
     end
 
     def add(key, value)
-      self[key] = value
+      self[key] = value if value
       self
     end
 
@@ -25,6 +25,11 @@ class DianPing
     def business(id)
       add :business_id, id
       get '/v1/business/get_single_business'
+    end
+
+    def reviews(id)
+      add :business_id, id
+      get '/v1/review/get_recent_reviews'
     end
 
   end
