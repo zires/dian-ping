@@ -32,6 +32,16 @@ class DianPing
       get '/v1/review/get_recent_reviews'
     end
 
+    def categories(city = nil)
+      add :city, city
+      get '/v1/metadata/get_categories_with_businesses'
+    end
+
+    def regions(city = nil)
+      add :city, city
+      get '/v1/metadata/get_regions_with_businesses'
+    end
+
   end
 end
 

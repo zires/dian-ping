@@ -10,7 +10,7 @@ class DianPing
       if config_file.file?
         begin
           options = YAML.load_file(config_file)[Rails.env]
-          ::DP = DianPing.new(key: options['appkey'], secret: options['appSecret'])
+          ::DP = DianPing.new(key: options['appkey'], secret: options['appSecret']) unless defined?(::DP)
         rescue Exception => e
           puts "There is a configuration error with the current dian_ping.yml"
           puts e.message

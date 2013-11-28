@@ -6,7 +6,7 @@ require 'dianping/parameter'
 class DianPing
   include HTTParty
 
-  VERSION = '0.0.3'
+  VERSION = '0.0.4'
 
   attr_accessor :key, :secret
 
