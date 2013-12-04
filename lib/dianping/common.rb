@@ -65,7 +65,7 @@ class DianPing
 
     # format
     #   返回数据格式，可选值为json或xml，如不传入，默认值为json
-    [:city, :category, :offset_type, :keyword, :out_offset_type, :platform, :sort, :page, :format].each do |key|
+    [:city, :category, :offset_type, :keyword, :out_offset_type, :platform, :sort, :page, :format, :region].each do |key|
       define_method(key) {|value|
         add key, value
       }
