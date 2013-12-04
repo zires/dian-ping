@@ -28,7 +28,7 @@ class DianPing
     end
 
     # 搜索半径，单位为米，最小值1，最大值5000，如不传入默认为1000
-    def radius
+    def radius(number)
       warn 'radius 最大值5000' if number > 5000
       add :radius, number
     end
@@ -65,7 +65,7 @@ class DianPing
 
     # format
     #   返回数据格式，可选值为json或xml，如不传入，默认值为json
-    [:category, :offset_type, :keyword, :out_offset_type, :platform, :sort, :page, :format].each do |key|
+    [:city, :category, :offset_type, :keyword, :out_offset_type, :platform, :sort, :page, :format].each do |key|
       define_method(key) {|value|
         add key, value
       }
