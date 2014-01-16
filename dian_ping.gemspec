@@ -11,6 +11,7 @@ Gem::Specification.new do |s|
   s.homepage    = "https://github.com/zires/dian-ping"
   s.summary     = "大众点评开放平台ruby版SDK"
   s.description = "大众点评开放平台ruby版SDK-http://developer.dianping.com/app/api"
+  s.license     = 'MIT'
 
   s.files = Dir["{lib}/**/*"] + ["LICENSE", "Rakefile", "README.md"]
   s.test_files = Dir["test/**/*"]
