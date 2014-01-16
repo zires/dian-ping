@@ -16,6 +16,14 @@ class DianPing
     @key, @secret = opts.values_at(:key, :secret)
   end
 
+  # @param route [String] 请求的URL
+  # @param param [Hash] 传递的参数
+  # @return [Hash]
+  #
+  # @example
+  #   dp = DianPing.new(key: 'Your key', secret: 'Your secret')
+  #   dp.get('/v1/reservation/get_all_id_list', {city: '上海'})
+  #
   def get(route, param)
     param[:sign]   = signature(param)
     param[:appkey] = @key
