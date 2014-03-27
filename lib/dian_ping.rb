@@ -24,7 +24,7 @@ class DianPing
   #   dp = DianPing.new(key: 'Your key', secret: 'Your secret')
   #   dp.get('/v1/reservation/get_all_id_list', {city: '上海'})
   #
-  def get(route, param)
+  def get(route, param = {})
     param[:sign]   = signature(param)
     param[:appkey] = @key
     self.class.get route, query: param

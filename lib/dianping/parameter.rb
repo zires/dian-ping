@@ -22,16 +22,34 @@ class DianPing
       client.get(route, self)
     end
 
+    # 商户类
+
+    # 搜索商户
+    # @example
+    #   DP.has_coupon.city('上海').find
+    def find
+      get '/v1/business/find_businesses'
+    end
+
     # 获取指定商户信息
+    # @example
+    #   DP.business('2951611')
+    #   DP.shop('2951611')
     def business(id)
       add :business_id, id
       get '/v1/business/get_single_business'
     end
+    alias_method :shop, :business
 
     # 获取指定商户最新点评片断
     def reviews(id)
       add :business_id, id
       get '/v1/review/get_recent_reviews'
+    end
+
+    # 获取支持商户搜索的最新城市列表
+    def cities
+      get '/v1/metadata/get_cities_with_businesses'
     end
 
     # 获取支持商户搜索的最新分类列表
