@@ -2,7 +2,7 @@
 
 ### 安装
 
-```
+```sh
 gem install 'dian_ping'
 ```
 
@@ -13,7 +13,7 @@ gem install 'dian_ping'
 
 ### 使用
 
-```
+```ruby
 require 'dian_ping'
 dp = DianPing.new(key: 'Your key', secret: 'Your secret')
 
